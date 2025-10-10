@@ -1,4 +1,4 @@
-# AI-lab-01-codes-
+# AI-lab-01/02-codes-
 # Task :01
 num = int(input("Enter a number: "))
 
@@ -45,3 +45,68 @@ if num % sum_of_digits == 0:
     print(num, "is a Harshad Number.")
 else:
     print(num, "is not a Harshad Number.")
+# Lab :02 codes
+# Task:01
+sample_list = ['abc', 'xyz', 'aba', '1221', 'xyzzyx', 'aa', '122']
+
+count = 0
+
+for s in sample_list:
+    if len(s) >= 2 and s[0] == s[-1]:
+        count = count + 1
+        
+print("Number of strings with same first and last character:", count)
+# Task:02
+numbers = (1, 2, 4, 2, 6)
+
+sum_result = sum(numbers)
+
+product_result = 1
+for n in numbers:
+    product_result = product_result * n
+
+print("Sum is:", sum_result)
+print("Product is:", product_result)
+# Task: 03
+numbers = [1, 2, 4, 2, 6]
+
+largest = max(numbers)
+
+print("The largest number in the list is:", largest)
+# Task:04
+L = [(), (), ('',), ('a', 'b'), (), ('a', 'b', 'c'), (), ('d',)]
+
+# Remove empty tuples
+L = [t for t in L if t]
+
+print("Result =", L)
+# Task:05
+n = int(input("Enter a number: "))
+
+# Create an empty dictionary
+result = {}
+
+# Generate dictionary items
+for x in range(1, n + 1):
+    result[str(x)] = x * x
+
+print(result)
+# Task:06
+numbers_dict = {
+    '0': 'Zero',
+    '1': 'One',
+    '2': 'Two',
+    '3': 'Three',
+    '4': 'Four',
+    '5': 'Five',
+    '6': 'Six',
+    '7': 'Seven',
+    '8': 'Eight',
+    '9': 'Nine'
+}
+
+num = input("Enter a number: ")
+
+for digit in num:
+    print(numbers_dict[digit], end=" ")
+    
